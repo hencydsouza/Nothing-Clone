@@ -32,7 +32,8 @@
     /* background-color: lightcoral; */
     height: var(--nav-height);
     border-bottom: 1px solid #f1f1f2;
-    position: static;
+    position: sticky;
+    background-color: #fff;
     top: 0;
     z-index: 100;
 }
@@ -108,11 +109,11 @@
 
 .info-text-container {
     width: 420px;
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 25px;
+    gap: 28px;
 }
 
 .info-text-heading {
@@ -123,7 +124,8 @@
 .info-text-description {
     font-family: 'NType82Regular';
     font-size: 1.15rem;
-    line-height: 2.4rem;
+    /* line-height: 2.4rem; */
+    line-height: 25px;
 }
 
 .info-button {
@@ -134,6 +136,13 @@
     font-family: 'LetteraMonoLLCondLightRegular';
     padding: 15px;
     border-radius: 50px;
+}
+
+.info-optional-link {
+    font-family: 'NType82Regular';
+    color: #002F6C;
+    position: absolute;
+    bottom: 5px;
 }
 
 .info-side-text {
@@ -147,6 +156,31 @@
 
 /* main section end */
 
+/* testimonial section starts */
+
+.testimonials-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.testimonials-container{
+    max-width: 300px;
+}
+
+.testimonials-heading{
+    font-family: 'NType82Headline';
+    font-size: 1.6rem;
+}
+
+.testimonials-text{
+    font-family: 'NType82Regular';
+    font-size: 1.2rem;
+}
+
+/* testimonial section ends */
+
 /* Media Queries */
 @media screen and (max-width: 1200px) {
     .nav-container {
@@ -156,10 +190,19 @@
     .nav-section {
         padding: 0 20px;
     }
+
+    .info-container {
+        height: fit-content;
+    }
+
+    .info-side-text {
+        font-size: 80px;
+        left: 90px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    .nav-list{
+    .nav-list {
         display: none;
     }
 
@@ -173,5 +216,15 @@
 
     .info-side-text {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials-section{
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
     }
 }

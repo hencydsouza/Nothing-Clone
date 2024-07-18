@@ -53,6 +53,7 @@
     font-family: 'Ndot55';
     font-size: 2rem;
     cursor: pointer;
+    text-overflow: clip;
 }
 
 .nav-list {
@@ -78,8 +79,9 @@
 }
 
 .profile-icon {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     cursor: pointer;
+    transform: scale(1);
 }
 
 /* nav section end */
@@ -114,6 +116,11 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 28px;
+}
+
+.info-optional-top-text {
+    font-family: 'NType82Regular';
+    font-size: 1.15rem;
 }
 
 .info-text-heading {
@@ -163,6 +170,7 @@
     justify-content: space-evenly;
     padding: 3rem 0;
     text-align: center;
+    text-overflow: clip;
 }
 
 .testimonials-container {
@@ -320,6 +328,8 @@
 
     .info-text-container {
         width: auto;
+        gap: 24px;
+        padding: 2rem 1.5rem;
     }
 
     .info-side-text {
@@ -372,5 +382,40 @@
 
     .footer-table-container {
         order: 1;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    :root {
+        --nav-height: 3rem
+    }
+
+    .nav-logo {
+        font-size: 1.6rem;
+    }
+
+    .profile-icon {
+        /* font-size: 1rem; */
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 245px) {
+    .footer-table-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-lower{
+        flex-direction: column;
+    }
+
+    .footer-lower-right{
+        align-items: start;
+        gap: 20px;
+    }
+
+    .footer-icons{
+        margin-top: 20px;
+        justify-content: flex-start;
     }
 }

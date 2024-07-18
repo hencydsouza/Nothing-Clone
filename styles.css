@@ -281,6 +281,7 @@
 #footer-table-heading {
     margin-bottom: 15px;
     font-family: 'MDPrimerBold';
+    cursor: inherit;
 }
 
 .footer-separator {
@@ -299,6 +300,10 @@
     list-style: none;
     display: flex;
     gap: 20px;
+}
+
+.footer-lower-left li{
+    cursor: pointer;
 }
 
 .footer-lower-right {
@@ -341,6 +346,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .icon-container i {

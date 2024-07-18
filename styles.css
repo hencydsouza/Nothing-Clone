@@ -1,0 +1,177 @@
+@font-face {
+    font-family: NType82Regular;
+    src: url("./fonts/NType82-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NType82Headline;
+    src: url("./fonts/NType82-Headline.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Ndot55;
+    src: url("./fonts/Ndot-55.otf") format("opentype");
+}
+
+@font-face {
+    font-family: LetteraMonoLLCondLightRegular;
+    src: url("./fonts/LetteraMonoLLCondLight-Regular.otf") format("opentype");
+}
+
+:root {
+    --nav-height: 3.6rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav section start*/
+.nav-section {
+    /* background-color: lightcoral; */
+    height: var(--nav-height);
+    border-bottom: 1px solid #f1f1f2;
+    position: static;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    /* justify-content: space-evenly;  */
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+
+}
+
+.nav-logo {
+    font-family: 'Ndot55';
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-list {
+    font-family: 'NType82Headline';
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    gap: 30px;
+    font-size: 1.15rem;
+}
+
+.nav-list-item {
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+    cursor: pointer;
+}
+
+.nav-list-item:hover {
+    border-bottom: 1px solid black;
+    margin-bottom: -1px;
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* nav section end */
+
+/* main section start */
+
+.info-container {
+    height: calc(100vh - var(--nav-height));
+    /* width: 100vw; */
+    background-color: #f3f5f8;
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info-text-container {
+    width: 420px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.info-text-heading {
+    font-family: 'NType82Headline';
+    font-size: 4rem;
+}
+
+.info-text-description {
+    font-family: 'NType82Regular';
+    font-size: 1.15rem;
+    line-height: 2.4rem;
+}
+
+.info-button {
+    background-color: #002f6c;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'LetteraMonoLLCondLightRegular';
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.info-side-text {
+    position: absolute;
+    font-family: 'Ndot55';
+    transform-origin: 0% 0%;
+    transform: rotateZ(90deg);
+    font-size: 110px;
+    left: 120px;
+}
+
+/* main section end */
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .nav-container {
+        width: 100%;
+    }
+
+    .nav-section {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-list{
+        display: none;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+
+    .info-text-container {
+        width: auto;
+    }
+
+    .info-side-text {
+        display: none;
+    }
+}
